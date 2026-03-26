@@ -53,9 +53,9 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IString source)
         : this(
             new DeterminedHash(id),
-            new DeterminedHash(diagramId),
-            new DeterminedHash(label),
-            new DeterminedHash(source))
+            diagramId,
+            label,
+            source)
     { }
 
     public SeriesRichRelationalModelHash(
