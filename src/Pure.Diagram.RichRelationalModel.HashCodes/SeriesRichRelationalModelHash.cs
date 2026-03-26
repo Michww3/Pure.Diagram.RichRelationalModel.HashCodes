@@ -66,8 +66,8 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         : this(
             idHash,
             new DeterminedHash(diagramId),
-            new DeterminedHash(label),
-            new DeterminedHash(source))
+            label,
+            source)
     { }
 
     public SeriesRichRelationalModelHash(
@@ -76,10 +76,10 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IString label,
         IString source)
         : this(
-            new DeterminedHash(id),
+            id,
             diagramIdHash,
             new DeterminedHash(label),
-            new DeterminedHash(source))
+            source)
     { }
 
     public SeriesRichRelationalModelHash(
@@ -88,8 +88,8 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IDeterminedHash labelHash,
         IString source)
         : this(
-            new DeterminedHash(id),
-            new DeterminedHash(diagramId),
+            id,
+            diagramId,
             labelHash,
             new DeterminedHash(source))
     { }
@@ -101,8 +101,8 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IDeterminedHash sourceHash)
         : this(
             new DeterminedHash(id),
-            new DeterminedHash(diagramId),
-            new DeterminedHash(label),
+            diagramId,
+            label,
             sourceHash)
     { }
 
@@ -115,7 +115,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
             idHash,
             diagramIdHash,
             new DeterminedHash(label),
-            new DeterminedHash(source))
+            source)
     { }
 
     public SeriesRichRelationalModelHash(
@@ -125,7 +125,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IString source)
         : this(
             idHash,
-            new DeterminedHash(diagramId),
+            diagramId,
             labelHash,
             new DeterminedHash(source))
     { }
@@ -138,7 +138,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         : this(
             idHash,
             new DeterminedHash(diagramId),
-            new DeterminedHash(label),
+            label,
             sourceHash)
     { }
 
@@ -151,7 +151,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
             new DeterminedHash(id),
             diagramIdHash,
             labelHash,
-            new DeterminedHash(source))
+            source)
     { }
 
     public SeriesRichRelationalModelHash(
@@ -162,7 +162,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         : this(
             new DeterminedHash(id),
             diagramIdHash,
-            new DeterminedHash(label),
+            label,
             sourceHash)
     { }
 
@@ -172,7 +172,7 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
         IDeterminedHash labelHash,
         IDeterminedHash sourceHash)
         : this(
-            new DeterminedHash(id),
+            id,
             new DeterminedHash(diagramId),
             labelHash,
             sourceHash)
