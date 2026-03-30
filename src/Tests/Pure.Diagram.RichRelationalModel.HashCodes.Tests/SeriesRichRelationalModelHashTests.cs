@@ -9,7 +9,7 @@ namespace Pure.Diagram.RichRelationalModel.HashCodes.Tests;
 
 public sealed record SeriesRichRelationalModelHashTests
 {
-    private static readonly byte[] TypePrefix =
+    private readonly byte[] _typePrefix =
     [
         148,
         26,
@@ -42,7 +42,7 @@ public sealed record SeriesRichRelationalModelHashTests
         SeriesRichRelationalModelHash expected = new SeriesRichRelationalModelHash(model);
         SeriesRichRelationalModelHash actual = new SeriesRichRelationalModelHash(model);
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -63,7 +63,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -84,7 +84,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -105,7 +105,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -126,7 +126,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -147,7 +147,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -168,7 +168,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -189,7 +189,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -210,7 +210,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -231,7 +231,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -252,7 +252,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -273,7 +273,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -294,7 +294,7 @@ public sealed record SeriesRichRelationalModelHashTests
             (model as ISeriesRelationalModel).Source
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -315,7 +315,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -337,7 +337,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -359,7 +359,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -380,7 +380,7 @@ public sealed record SeriesRichRelationalModelHashTests
             new DeterminedHash((model as ISeriesRelationalModel).Source)
         );
 
-        Assert.Equal(expected, actual);
+        Assert.True(expected.SequenceEqual(actual));
     }
 
     [Fact]
@@ -395,7 +395,7 @@ public sealed record SeriesRichRelationalModelHashTests
 
         IEnumerable hashEnumerable = new SeriesRichRelationalModelHash(model);
         IEnumerator<byte> expectedHash = new DeterminedHash(
-            TypePrefix
+            _typePrefix
                 .Concat(new DeterminedHash(model.Id))
                 .Concat(new DeterminedHash(model.DiagramId))
                 .Concat(new DeterminedHash((model as ISeriesRelationalModel).Label))
@@ -428,7 +428,7 @@ public sealed record SeriesRichRelationalModelHashTests
         );
 
         IEnumerable<byte> expectedHash = new DeterminedHash(
-            TypePrefix
+            _typePrefix
                 .Concat(new DeterminedHash(model.Id))
                 .Concat(new DeterminedHash(model.DiagramId))
                 .Concat(new DeterminedHash((model as ISeriesRelationalModel).Label))
