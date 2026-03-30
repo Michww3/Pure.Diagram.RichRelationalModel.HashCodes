@@ -39,198 +39,140 @@ public sealed record SeriesRichRelationalModelHash : IDeterminedHash
     private readonly IDeterminedHash _sourceHash;
 
     public SeriesRichRelationalModelHash(ISeriesRichRelationalModel model)
-    : this(
-        model.Id,
-        model.DiagramId,
-        (model as ISeriesRelationalModel).Label,
-        (model as ISeriesRelationalModel).Source)
+        : this(
+            model.Id,
+            model.DiagramId,
+            (model as ISeriesRelationalModel).Label,
+            (model as ISeriesRelationalModel).Source
+        )
     { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IGuid diagramId,
         IString label,
-        IString source)
-        : this(
-            new DeterminedHash(id),
-            diagramId,
-            label,
-            source)
-    { }
+        IString source
+    )
+        : this(new DeterminedHash(id), diagramId, label, source) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IGuid diagramId,
         IString label,
-        IString source)
-        : this(
-            idHash,
-            new DeterminedHash(diagramId),
-            label,
-            source)
-    { }
+        IString source
+    )
+        : this(idHash, new DeterminedHash(diagramId), label, source) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IDeterminedHash diagramIdHash,
         IString label,
-        IString source)
-        : this(
-            id,
-            diagramIdHash,
-            new DeterminedHash(label),
-            source)
-    { }
+        IString source
+    )
+        : this(id, diagramIdHash, new DeterminedHash(label), source) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IGuid diagramId,
         IDeterminedHash labelHash,
-        IString source)
-        : this(
-            id,
-            diagramId,
-            labelHash,
-            new DeterminedHash(source))
-    { }
+        IString source
+    )
+        : this(id, diagramId, labelHash, new DeterminedHash(source)) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IGuid diagramId,
         IString label,
-        IDeterminedHash sourceHash)
-        : this(
-            new DeterminedHash(id),
-            diagramId,
-            label,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(new DeterminedHash(id), diagramId, label, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IDeterminedHash diagramIdHash,
         IString label,
-        IString source)
-        : this(
-            idHash,
-            diagramIdHash,
-            new DeterminedHash(label),
-            source)
-    { }
+        IString source
+    )
+        : this(idHash, diagramIdHash, new DeterminedHash(label), source) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IGuid diagramId,
         IDeterminedHash labelHash,
-        IString source)
-        : this(
-            idHash,
-            diagramId,
-            labelHash,
-            new DeterminedHash(source))
-    { }
+        IString source
+    )
+        : this(idHash, diagramId, labelHash, new DeterminedHash(source)) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IGuid diagramId,
         IString label,
-        IDeterminedHash sourceHash)
-        : this(
-            idHash,
-            new DeterminedHash(diagramId),
-            label,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(idHash, new DeterminedHash(diagramId), label, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IDeterminedHash diagramIdHash,
         IDeterminedHash labelHash,
-        IString source)
-        : this(
-            new DeterminedHash(id),
-            diagramIdHash,
-            labelHash,
-            source)
-    { }
+        IString source
+    )
+        : this(new DeterminedHash(id), diagramIdHash, labelHash, source) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IDeterminedHash diagramIdHash,
         IString label,
-        IDeterminedHash sourceHash)
-        : this(
-            new DeterminedHash(id),
-            diagramIdHash,
-            label,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(new DeterminedHash(id), diagramIdHash, label, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IGuid diagramId,
         IDeterminedHash labelHash,
-        IDeterminedHash sourceHash)
-        : this(
-            id,
-            new DeterminedHash(diagramId),
-            labelHash,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(id, new DeterminedHash(diagramId), labelHash, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IDeterminedHash diagramIdHash,
         IDeterminedHash labelHash,
-        IString source)
-        : this(
-            idHash,
-            diagramIdHash,
-            labelHash,
-            new DeterminedHash(source))
-    { }
+        IString source
+    )
+        : this(idHash, diagramIdHash, labelHash, new DeterminedHash(source)) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IDeterminedHash diagramIdHash,
         IString label,
-        IDeterminedHash sourceHash)
-        : this(
-            idHash,
-            diagramIdHash,
-            new DeterminedHash(label),
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(idHash, diagramIdHash, new DeterminedHash(label), sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IGuid diagramId,
         IDeterminedHash labelHash,
-        IDeterminedHash sourceHash)
-        : this(
-            idHash,
-            new DeterminedHash(diagramId),
-            labelHash,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(idHash, new DeterminedHash(diagramId), labelHash, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IGuid id,
         IDeterminedHash diagramIdHash,
         IDeterminedHash labelHash,
-        IDeterminedHash sourceHash)
-        : this(
-            new DeterminedHash(id),
-            diagramIdHash,
-            labelHash,
-            sourceHash)
-    { }
+        IDeterminedHash sourceHash
+    )
+        : this(new DeterminedHash(id), diagramIdHash, labelHash, sourceHash) { }
 
     public SeriesRichRelationalModelHash(
         IDeterminedHash idHash,
         IDeterminedHash diagramIdHash,
         IDeterminedHash labelHash,
-        IDeterminedHash sourceHash)
+        IDeterminedHash sourceHash
+    )
     {
         _idHash = idHash;
         _diagramIdHash = diagramIdHash;

@@ -437,5 +437,4 @@ public sealed record SeriesRichRelationalModelHashTests
 
         Assert.Equal(expectedHash, new SeriesRichRelationalModelHash(model));
     }
-
 }

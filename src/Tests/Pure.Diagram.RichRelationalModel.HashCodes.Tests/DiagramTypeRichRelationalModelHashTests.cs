@@ -38,8 +38,10 @@ public sealed record DiagramTypeRichRelationalModelHashTests
             new RandomString()
         );
 
-        DiagramTypeRichRelationalModelHash expected = new DiagramTypeRichRelationalModelHash(model);
-        DiagramTypeRichRelationalModelHash actual = new DiagramTypeRichRelationalModelHash(model);
+        DiagramTypeRichRelationalModelHash expected =
+            new DiagramTypeRichRelationalModelHash(model);
+        DiagramTypeRichRelationalModelHash actual =
+            new DiagramTypeRichRelationalModelHash(model);
 
         Assert.True(expected.SequenceEqual(actual));
     }
@@ -50,12 +52,14 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash expected = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash expected =
+            new DiagramTypeRichRelationalModelHash(
+                new DeterminedHash(id),
+                new DeterminedHash(name)
+            );
 
-        DiagramTypeRichRelationalModelHash actual = new DiagramTypeRichRelationalModelHash(id, name);
+        DiagramTypeRichRelationalModelHash actual =
+            new DiagramTypeRichRelationalModelHash(id, name);
 
         Assert.True(expected.SequenceEqual(actual));
     }
@@ -66,15 +70,14 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash expected = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash expected =
+            new DiagramTypeRichRelationalModelHash(
+                new DeterminedHash(id),
+                new DeterminedHash(name)
+            );
 
-        DiagramTypeRichRelationalModelHash actual = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            name
-        );
+        DiagramTypeRichRelationalModelHash actual =
+            new DiagramTypeRichRelationalModelHash(new DeterminedHash(id), name);
 
         Assert.True(expected.SequenceEqual(actual));
     }
@@ -85,15 +88,14 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash expected = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash expected =
+            new DiagramTypeRichRelationalModelHash(
+                new DeterminedHash(id),
+                new DeterminedHash(name)
+            );
 
-        DiagramTypeRichRelationalModelHash actual = new DiagramTypeRichRelationalModelHash(
-            id,
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash actual =
+            new DiagramTypeRichRelationalModelHash(id, new DeterminedHash(name));
 
         Assert.True(expected.SequenceEqual(actual));
     }
@@ -104,15 +106,17 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash expected = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash expected =
+            new DiagramTypeRichRelationalModelHash(
+                new DeterminedHash(id),
+                new DeterminedHash(name)
+            );
 
-        DiagramTypeRichRelationalModelHash actual = new DiagramTypeRichRelationalModelHash(
-            new DeterminedHash(id),
-            new DeterminedHash(name)
-        );
+        DiagramTypeRichRelationalModelHash actual =
+            new DiagramTypeRichRelationalModelHash(
+                new DeterminedHash(id),
+                new DeterminedHash(name)
+            );
 
         Assert.True(expected.SequenceEqual(actual));
     }
@@ -123,13 +127,14 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash hash = new DiagramTypeRichRelationalModelHash(id, name);
+        DiagramTypeRichRelationalModelHash hash = new DiagramTypeRichRelationalModelHash(
+            id,
+            name
+        );
 
         IEnumerable hashEnumerable = hash;
         IEnumerator<byte> expectedHash = new DeterminedHash(
-            _typePrefix
-                .Concat(new DeterminedHash(id))
-                .Concat(new DeterminedHash(name))
+            _typePrefix.Concat(new DeterminedHash(id)).Concat(new DeterminedHash(name))
         ).GetEnumerator();
 
         bool equal = true;
@@ -153,12 +158,13 @@ public sealed record DiagramTypeRichRelationalModelHashTests
         IGuid id = new Guid();
         IString name = new RandomString();
 
-        DiagramTypeRichRelationalModelHash hash = new DiagramTypeRichRelationalModelHash(id, name);
+        DiagramTypeRichRelationalModelHash hash = new DiagramTypeRichRelationalModelHash(
+            id,
+            name
+        );
 
         IEnumerable<byte> expectedHash = new DeterminedHash(
-            _typePrefix
-                .Concat(new DeterminedHash(id))
-                .Concat(new DeterminedHash(name))
+            _typePrefix.Concat(new DeterminedHash(id)).Concat(new DeterminedHash(name))
         );
 
         Assert.Equal(expectedHash, hash);

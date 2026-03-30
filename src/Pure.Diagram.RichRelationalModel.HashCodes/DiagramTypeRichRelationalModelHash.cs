@@ -35,28 +35,21 @@ public sealed record DiagramTypeRichRelationalModelHash : IDeterminedHash
     private readonly IDeterminedHash _nameHash;
 
     public DiagramTypeRichRelationalModelHash(IDiagramTypeRichRelationalModel model)
-        : this(model.Id, (model as IDiagramTypeRelationalModel).Name)
-    { }
+        : this(model.Id, (model as IDiagramTypeRelationalModel).Name) { }
 
     public DiagramTypeRichRelationalModelHash(IGuid id, IString name)
-        : this(new DeterminedHash(id), name)
-    { }
+        : this(new DeterminedHash(id), name) { }
+
+    public DiagramTypeRichRelationalModelHash(IDeterminedHash idHash, IString name)
+        : this(idHash, new DeterminedHash(name)) { }
+
+    public DiagramTypeRichRelationalModelHash(IGuid id, IDeterminedHash nameHash)
+        : this(new DeterminedHash(id), nameHash) { }
 
     public DiagramTypeRichRelationalModelHash(
         IDeterminedHash idHash,
-        IString name)
-        : this(idHash, new DeterminedHash(name))
-    { }
-
-    public DiagramTypeRichRelationalModelHash(
-        IGuid id,
-        IDeterminedHash nameHash)
-        : this(new DeterminedHash(id), nameHash)
-    { }
-
-    public DiagramTypeRichRelationalModelHash(
-        IDeterminedHash idHash,
-        IDeterminedHash nameHash)
+        IDeterminedHash nameHash
+    )
     {
         _idHash = idHash;
         _nameHash = nameHash;

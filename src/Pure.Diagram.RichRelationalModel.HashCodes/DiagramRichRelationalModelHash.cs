@@ -63,15 +63,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeId,
-            type,
-            series
-        )
-    { }
+        : this(new DeterminedHash(id), title, description, typeId, type, series) { }
 
     public DiagramRichRelationalModelHash(
         IDeterminedHash idHash,
@@ -81,15 +73,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            idHash,
-            new DeterminedHash(title),
-            description,
-            typeId,
-            type,
-            series
-        )
-    { }
+        : this(idHash, new DeterminedHash(title), description, typeId, type, series) { }
 
     public DiagramRichRelationalModelHash(
         IGuid id,
@@ -99,15 +83,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            titleHash,
-            description,
-            typeId,
-            type,
-            series
-        )
-    { }
+        : this(new DeterminedHash(id), titleHash, description, typeId, type, series) { }
 
     public DiagramRichRelationalModelHash(
         IGuid id,
@@ -117,15 +93,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            descriptionHash,
-            typeId,
-            type,
-            series
-        )
-    { }
+        : this(new DeterminedHash(id), title, descriptionHash, typeId, type, series) { }
 
     public DiagramRichRelationalModelHash(
         IGuid id,
@@ -135,15 +103,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeIdHash,
-            type,
-            series
-        )
-    { }
+        : this(new DeterminedHash(id), title, description, typeIdHash, type, series) { }
 
     public DiagramRichRelationalModelHash(
         IGuid id,
@@ -153,15 +113,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeId,
-            typeHash,
-            series
-        )
-    { }
+        : this(new DeterminedHash(id), title, description, typeId, typeHash, series) { }
 
     public DiagramRichRelationalModelHash(
         IGuid id,
@@ -171,15 +123,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IDeterminedHash seriesHash
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeId,
-            type,
-            seriesHash
-        )
-    { }
+        : this(new DeterminedHash(id), title, description, typeId, type, seriesHash) { }
 
     public DiagramRichRelationalModelHash(
         IDeterminedHash idHash,
@@ -189,14 +133,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IDeterminedHash seriesHash
     )
-        : this(
-            idHash,
-            new DeterminedHash(title),
-            description,
-            typeId,
-            type,
-            seriesHash
-        )
+        : this(idHash, new DeterminedHash(title), description, typeId, type, seriesHash)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -207,14 +144,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IDeterminedHash seriesHash
     )
-        : this(
-            new DeterminedHash(id),
-            titleHash,
-            description,
-            typeId,
-            type,
-            seriesHash
-        )
+        : this(new DeterminedHash(id), titleHash, description, typeId, type, seriesHash)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -225,14 +155,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeIdHash,
-            typeHash,
-            series
-        )
+        : this(new DeterminedHash(id), title, description, typeIdHash, typeHash, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -243,14 +166,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IDeterminedHash seriesHash
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            descriptionHash,
-            typeId,
-            type,
-            seriesHash
-        )
+        : this(new DeterminedHash(id), title, descriptionHash, typeId, type, seriesHash)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -261,14 +177,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            descriptionHash,
-            typeId,
-            typeHash,
-            series
-        )
+        : this(new DeterminedHash(id), title, descriptionHash, typeId, typeHash, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -279,14 +188,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            titleHash,
-            description,
-            typeId,
-            typeHash,
-            series
-        )
+        : this(new DeterminedHash(id), titleHash, description, typeId, typeHash, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -297,14 +199,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IEnumerable<ISeries> series
     )
-        : this(
-            idHash,
-            new DeterminedHash(title),
-            description,
-            typeId,
-            typeHash,
-            series
-        )
+        : this(idHash, new DeterminedHash(title), description, typeId, typeHash, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -315,14 +210,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IDeterminedHash seriesHash
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeIdHash,
-            type,
-            seriesHash
-        )
+        : this(new DeterminedHash(id), title, description, typeIdHash, type, seriesHash)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -333,14 +221,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            descriptionHash,
-            typeIdHash,
-            type,
-            series
-        )
+        : this(new DeterminedHash(id), title, descriptionHash, typeIdHash, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -351,14 +232,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            titleHash,
-            description,
-            typeIdHash,
-            type,
-            series
-        )
+        : this(new DeterminedHash(id), titleHash, description, typeIdHash, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -369,14 +243,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            idHash,
-            new DeterminedHash(title),
-            description,
-            typeIdHash,
-            type,
-            series
-        )
+        : this(idHash, new DeterminedHash(title), description, typeIdHash, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -387,14 +254,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDeterminedHash typeHash,
         IDeterminedHash seriesHash
     )
-        : this(
-            new DeterminedHash(id),
-            title,
-            description,
-            typeId,
-            typeHash,
-            seriesHash
-        )
+        : this(new DeterminedHash(id), title, description, typeId, typeHash, seriesHash)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -405,14 +265,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            new DeterminedHash(id),
-            titleHash,
-            descriptionHash,
-            typeId,
-            type,
-            series
-        )
+        : this(new DeterminedHash(id), titleHash, descriptionHash, typeId, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -423,14 +276,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            idHash,
-            new DeterminedHash(title),
-            descriptionHash,
-            typeId,
-            type,
-            series
-        )
+        : this(idHash, new DeterminedHash(title), descriptionHash, typeId, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
@@ -441,14 +287,7 @@ public sealed record DiagramRichRelationalModelHash : IDeterminedHash
         IDiagramType type,
         IEnumerable<ISeries> series
     )
-        : this(
-            idHash,
-            titleHash,
-            new DeterminedHash(description),
-            typeId,
-            type,
-            series
-        )
+        : this(idHash, titleHash, new DeterminedHash(description), typeId, type, series)
     { }
 
     public DiagramRichRelationalModelHash(
